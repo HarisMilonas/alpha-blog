@@ -33,4 +33,10 @@ class ArticlesController < ApplicationController
             render 'edit'                              # an oxi render pali thn edit selida(ksanafortwse thn)
      end
     end
+    
+    def destroy
+        @article = Article.find(params[:id]) 
+        @article.destroy
+        redirect_to articles_path
+    end
 end

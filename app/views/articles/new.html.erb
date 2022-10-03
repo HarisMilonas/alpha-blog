@@ -1,6 +1,6 @@
 <h1>Create a new article</h1>
 
-<% if @article.errors.any? %>  <% # kwdikas gia error display message se periptwsh lathos kataxwrhshs%>
+<% if @article.errors.any? %>  <%# kwdikas gia error display message se periptwsh lathos kataxwrhshs%>
     <h2>The following errors prevented the article from being saved</h2>
     <ul>
      <% @article.errors.full_messages.each do |msg| %>  <%# einai h errors.full_messages mia methodos pou sou kanei display ola ta errors poy ginane%>
