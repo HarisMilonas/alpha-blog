@@ -10,6 +10,9 @@
   </head>
 
   <body>
+    <% flash.each do |name, message| %>    <%# me autes tis grammes kwdiak ektypwnw to successfull mhnuma gia ena submit pou egine %>
+    <%= message %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
