@@ -2,3 +2,7 @@
 
 <p><strong>Title: <%= @article.title %> </strong></p>              
 <p><strong>Description: <%= @article.description %> </strong></p>   <!-- to <% %> shmainei oti ekei einai ruby code kai oxi html to = mesa shmainei kanei kai display sthn othoni oti exei mesa -->
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%=  button_to 'Delete',article_path(@article), method: :delete, data: {confirm: 'Are you sure?'} %> |
+<%= link_to 'Return to articles listing', articles_path %>

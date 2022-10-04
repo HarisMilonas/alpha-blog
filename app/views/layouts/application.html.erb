@@ -10,9 +10,7 @@
   </head>
 
   <body>
-    <% flash.each do |name, message| %>    <%# me autes tis grammes kwdiak ektypwnw to successfull mhnuma gia ena submit pou egine %>
-    <%= message %>
-    <% end %>
+    <%= render 'layouts/messages'%>  <%# Kalese ton kwdika apo to _messages pou einai partial file%>
     <%= yield %>
   </body>
 </html>
