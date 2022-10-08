@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
     end
 
 
-    private 
+    private  # oi methodoi autoi einai private
 
 
     def set_article
