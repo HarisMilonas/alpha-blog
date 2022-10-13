@@ -1,8 +1,25 @@
-<h1>Showing article details</h1>
-
-<p><strong>Title: <%= @article.title %> </strong></p>              
-<p><strong>Description: <%= @article.description %> </strong></p>   <!-- to <% %> shmainei oti ekei einai ruby code kai oxi html to = mesa shmainei kanei kai display sthn othoni oti exei mesa -->
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%=  button_to 'Delete',article_path(@article), method: :delete, data: {confirm: 'Are you sure?'} %> |
-<%= link_to 'Return to articles listing', articles_path %>
+<div  class="p-3 mb-2 bg-light text-dark">
+<h2 class = "text-center" mt-4><%= @article.title%></h2>
+<div class="container">
+<div class="row justify-content-md-center">
+    <div class="col-8 mt-4">
+         <div class="card text-center shadow  mb-5 bg-white rounded">
+            <div class="card-header font-italic">
+                by Haris Milonas
+            </div>
+            <div class="card-body">
+                <div class="card-text text-start"><%= simple_format(@article.description) %></div> <%# Simple_format methodos kanei display to keimeno etsi akribws opws to grafw(px na afhnw parapanw kena) %>
+               <div class="btn-group">
+                    <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-info"%>
+                    <%= button_to 'Delete',article_path(@article), method: :delete  ,data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger" %>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+               <small> Created ago <%= time_ago_in_words(@article.created_at)%>,  <%# time_ago_in_words Deixnei mono tis meres%>
+               edited <%= time_ago_in_words(@article.updated_at)%> ago</small>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

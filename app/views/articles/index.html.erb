@@ -1,4 +1,4 @@
-<div class="p-3 mb-2 bg-light text-dark">
+<div   class="p-3 mb-2 bg-light text-dark">
 <h1 class = "text-center" mt-4>Listing all articles</h1>
 <div class="container">
 <% @articles.each do  |article|  %>
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="card-footer text-muted">
-               <small> Created ago <%= time_ago_in_words(article.created_at)%>,
+               <small> Created ago <%= time_ago_in_words(article.created_at)%>,  <%# time_ago_in_words Deixnei mono tis meres%>
                edited <%= time_ago_in_words(article.updated_at)%> ago</small>
             </div>
             </div>
