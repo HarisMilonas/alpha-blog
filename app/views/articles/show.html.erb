@@ -5,7 +5,7 @@
     <div class="col-8 mt-4">
          <div class="card text-center shadow  mb-5 bg-white rounded">
             <div class="card-header font-italic">
-                by Haris Milonas
+               <%= @article.user.username %>
             </div>
             <div class="card-body">
                 <div class="card-text text-start"><%= simple_format(@article.description) %></div> <%# Simple_format methodos kanei display to keimeno etsi akribws opws to grafw(px na afhnw parapanw kena) %>
