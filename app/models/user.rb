@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    before_save { self.email = email.downcase }         #pairnei to kathe meil pou paei na apothikeutei kai kanei ola tou ta grammata mikra
     has_many :articles  # one to many association
     validates :username, presence: true, 
                         uniqueness: { case_sensitive: false }, 
