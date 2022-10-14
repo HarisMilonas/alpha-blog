@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
 
     def create
         @article = Article.new(article_params)
+        @article.user = User.first          # BAZOUME HARD CODE ENA USER MEXRI NA FTIAKSOUME AUTHENTICATION SYSTEM
        if  @article.save 
             flash[:notice] = "Article was created successfully"
         redirect_to @article   #kanonika einai redirect_to article_path(@article) alla xrisimopoeitai toso suxna poy h ruby exei suntomografia gia auto
