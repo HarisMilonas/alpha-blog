@@ -1,8 +1,8 @@
-<% if @article.errors.any? %>  <%# kwdikas gia error display message se periptwsh lathos kataxwrhshs%>
+<% if obj.errors.any? %>  <%# kwdikas gia error display message se periptwsh lathos kataxwrhshs%>
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
         <h4 class="alert-heading">The following errors prevented the article from being saved</h4>
         <ul>
-            <% @article.errors.full_messages.each do |msg| %>  <%# einai h errors.full_messages mia methodos pou sou kanei display ola ta errors poy ginane%>
+            <% obj.errors.full_messages.each do |msg| %>  <%# einai h errors.full_messages mia methodos pou sou kanei display ola ta errors poy ginane%>
                 <li><%= msg %> </li>
             <% end %>
          </ul>
